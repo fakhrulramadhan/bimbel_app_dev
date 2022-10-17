@@ -1,0 +1,249 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
+import 'package:lat_login_new/halaman/belipaket.dart';
+import 'package:lat_login_new/halamanloginvalidasi.dart';
+
+class Profil extends StatefulWidget {
+  // const Profil({ Key? key }) : super(key: key);
+
+  @override
+  State<Profil> createState() => _ProfilState();
+}
+
+class _ProfilState extends State<Profil> {
+  // bool warnalisttile = true; //ketika di tap,dia ganti warna
+
+  //kasih inisiasi awal buat warna
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+          //jangan pakai leading,mau diganti sama drawer
+          // leading: Icon(
+          //   Icons.menu,
+          //   color: Colors.white,
+          // ),
+          title: Text(
+            "Learning kuy",
+            textAlign: TextAlign.left,
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 25,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+          centerTitle: false,
+          backgroundColor: Color(0xFF05589C),
+          actions: [
+            Icon(
+              Icons.people_alt,
+              color: Colors.white,
+            )
+          ],
+        ),
+        drawer: Drawer(
+          child: Column(
+            //align secara horizontal
+            crossAxisAlignment: CrossAxisAlignment.start,
+
+            children: [
+              //judul harus tetap pakai container, agar tetap berada diatas
+              Container(
+                width: double.infinity,
+                height: 100,
+                color: Colors.blue.shade900,
+                alignment: Alignment.center,
+                child: Text(
+                  "Menu Utama",
+                  style: TextStyle(fontSize: 25, color: Colors.white),
+                ),
+              ),
+              //isi pakai expanded agar kebawahnya tidak overflow, (tidak terhingga)
+              //dan juga pakai listview agar bia discroll kebawah
+              Expanded(
+                  child: ListView(
+                scrollDirection: Axis.vertical,
+                padding: EdgeInsets.zero,
+                children: [
+                  ListTile(
+                    leading: Icon(Icons.video_library_rounded),
+                    title: Text("Materi Belajar"),
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.book),
+                    title: Text("Laporan Nilai"),
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.people_alt),
+                    title: Text("Konsultasi Materi"),
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.forum),
+                    title: Text("Cerita Sukses"),
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.payment),
+                    title: Text("Beli Paket"),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => BeliPaket(),
+                          ));
+                    },
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.people_alt),
+                    title: Text("Profil"),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Profil(),
+                          ));
+                    },
+                  ),
+                  // SizedBox(
+                  //   height: 200,
+                  // ),
+                  ListTile(
+                    leading: Icon(Icons.logout_rounded),
+                    title: Text("Logout Akun"),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => HalamanLoginValidasi(),
+                          ));
+                    },
+                  )
+                ],
+              ))
+            ],
+          ),
+        ),
+        body: ListView(
+          scrollDirection: Axis.vertical,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ClipRRect(
+                  //agar bulatannya sempurna, kasih 1/2 dari wdith
+                  borderRadius: BorderRadius.circular(35),
+                  child: Container(
+                    margin: EdgeInsets.only(top: 20, bottom: 20),
+                    width: 70,
+                    height: 70,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("images/sains.png"))),
+                  ),
+                )
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Deri Ferdiansyah",
+                  style: TextStyle(color: Colors.black, fontSize: 21),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Column(
+              children: [
+                ListTile(
+                  leading: Icon(Icons.settings),
+                  title: Text("Pengaturan"),
+                  tileColor: Colors.white24,
+                  // onTap: () {
+                  //   //ketika diklik, maka warna tile berubah
+                  //   setState(() {
+                  //     //warna listtile akan kebalikannya dari sebelumnya
+                  //     warnalisttile = !warnalisttile;
+                  //   });
+                  // },
+                ),
+                Divider(
+                  height: 4,
+                  color: Colors.black,
+                  //thickness: 2, //ketebalan
+                ),
+                ListTile(
+                  leading: Icon(Icons.people_outlined),
+                  title: Text("Status Keanggotaan"),
+                  tileColor: Colors.white24,
+                  // onTap: () {
+                  //   setState(() {
+                  //     warnalisttile = !warnalisttile;
+                  //   });
+                  // },
+                ),
+                Divider(
+                  height: 4,
+                  color: Colors.black,
+                ),
+                ListTile(
+                  leading: Icon(Icons.call),
+                  title: Text("Kontak Kami"),
+
+                  // onTap: () {
+                  //   setState(() {
+                  //     warnalisttile = !warnalisttile;
+                  //   });
+                  // },
+                ),
+                Divider(
+                  height: 4,
+                  color: Colors.black,
+                ),
+                ListTile(
+                  leading: Icon(Icons.warning),
+                  title: Text("Kebijakan Pengguna"),
+
+                  // onTap: () {
+                  //   setState(() {
+                  //     warnalisttile = !warnalisttile;
+                  //   });
+                  // },
+                ),
+                Divider(
+                  height: 4,
+                  color: Colors.black,
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 30,
+            ),
+          ],
+        )
+        // Column(
+        //   children: [
+        //     Padding(
+        //       padding: EdgeInsets.only(top: 45),
+        //       child: Center(
+        //         child: Container(
+        //             width: 180,
+        //             height: 180,
+        //             child: ClipRRect(
+        //                 child: Image(image: AssetImage("images/sains.jpg")))
+        //             // color: Colors.grey,
+        //             // Icon(
+        //             //   Icons.login_sharp,
+        //             //   size: 150,
+        //             // ),
+        //             ),
+        //       ),
+        //     ),
+        //   ],
+        // )
+        );
+  }
+}

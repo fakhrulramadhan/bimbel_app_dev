@@ -1,0 +1,29 @@
+import 'package:flutter/material.dart';
+import 'package:lat_login_new/splashscreen/splash.dart';
+//import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'halamanloginvalidasi.dart'; //masukkin halaman login
+
+//main untuk mnejalankan proejct (sebutin nama)
+void main() {
+  runApp(MyApp());
+}
+
+//https://medium.com/swlh/forms-and-validation-in-flutter-login-ui-f2e7db4e00c9
+//tutorial password strength
+//https://medium.flutterdevs.com/password-strength-checker-in-flutter-90723799009
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "Latihan Buat Login",
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      //home: HalamanLoginValidasi(),
+      
+      home: Splash(),
+      //home: Splash(), //halaman awalnya pakai halaman splash.dart
+    );
+  }
+}

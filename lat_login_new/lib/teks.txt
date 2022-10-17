@@ -1,0 +1,177 @@
+Container(
+                  width: double.infinity,
+                  height: 100,
+                  color: Colors.white,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            width: 110,
+                            height: 90,
+                            //color: Colors.,
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 50,
+                                  height: 50,
+                                  decoration: BoxDecoration(
+                                      //width / 2 agar bisa bulat sempurna
+                                      borderRadius: BorderRadius.circular(25),
+                                      color: Colors.green,
+                                      image: DecorationImage(
+                                          image: AssetImage("images/ipa.png"),
+                                          fit: BoxFit.cover)),
+                                ),
+                                SizedBox(
+                                  height: 7,
+                                ),
+                                Text(
+                                  "IPA",
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold),
+                                )
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            width: 15,
+                          ),
+                          Container(
+                            width: 110,
+                            height: 90,
+                            //color: Colors.,
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 50,
+                                  height: 50,
+                                  decoration: BoxDecoration(
+                                      //width / 2 agar bisa bulat sempurna
+                                      borderRadius: BorderRadius.circular(25),
+                                      color: Colors.green,
+                                      image: DecorationImage(
+                                          image:
+                                              AssetImage("images/kelinci.jpg"),
+                                          fit: BoxFit.cover)),
+                                ),
+                                SizedBox(
+                                  height: 7,
+                                ),
+                                Text(
+                                  "IPA",
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold),
+                                )
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            width: 15,
+                          ),
+                          Container(
+                            width: 110,
+                            height: 90,
+                            //color: Colors.,
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 50,
+                                  height: 50,
+                                  decoration: BoxDecoration(
+                                      //width / 2 agar bisa bulat sempurna
+                                      borderRadius: BorderRadius.circular(25),
+                                      color: Colors.green,
+                                      image: DecorationImage(
+                                          image:
+                                              AssetImage("images/kelinci.jpg"),
+                                          fit: BoxFit.cover)),
+                                ),
+                                SizedBox(
+                                  height: 7,
+                                ),
+                                Text(
+                                  "IPA",
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold),
+                                )
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            width: 15,
+                          ),
+                          Container(
+                            width: 110,
+                            height: 90,
+                            //color: Colors.,
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 50,
+                                  height: 50,
+                                  decoration: BoxDecoration(
+                                      //width / 2 agar bisa bulat sempurna
+                                      borderRadius: BorderRadius.circular(25),
+                                      color: Colors.green,
+                                      image: DecorationImage(
+                                          image:
+                                              AssetImage("images/kelinci.jpg"),
+                                          fit: BoxFit.cover)),
+                                ),
+                                SizedBox(
+                                  height: 7,
+                                ),
+                                Text(
+                                  "IPA",
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold),
+                                )
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            width: 15,
+                          ),
+                          Container(
+                            width: 110,
+                            height: 90,
+                            //color: Colors.green,
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 50,
+                                  height: 50,
+                                  decoration: BoxDecoration(
+                                      //width / 2 agar bisa bulat sempurna
+                                      borderRadius: BorderRadius.circular(25),
+                                      color: Colors.green,
+                                      image: DecorationImage(
+                                          image:
+                                              AssetImage("images/kelinci.jpg"),
+                                          fit: BoxFit.cover)),
+                                ),
+                                SizedBox(
+                                  height: 7,
+                                ),
+                                Text(
+                                  "IPA",
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold),
+                                )
+                              ],
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
